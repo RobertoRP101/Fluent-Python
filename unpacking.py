@@ -21,3 +21,16 @@ def swapping_values():
     numbers[0], numbers[-1] = numbers[-1], numbers[0]
     print('After swapping')
     print(numbers)
+    
+# Prefixing an argument
+def prefixing_an_argument():
+    '''
+    This unpacking method use the *
+    operator to access to each
+    element inside an iterable
+    '''
+    divmod(20, 8)
+    t = (20, 8)
+    print(divmod(*t))
+    quotient, remainder = divmod(*t)
+    print(f'quotient {quotient}, remaider{remainder}')
