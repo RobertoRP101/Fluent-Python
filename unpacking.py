@@ -55,3 +55,21 @@ def grab_excess_items():
     print('Random range')
     a, b, *excess = np.random.normal(0,1,100)
     print(f'a: {a}, b: {b}, excess: {excess}')
+    
+    
+# Mixing up to strategies to unpack values
+def parallel_assignment_and_grab_excess():
+    '''
+    This method lets us assign as many
+    values as we want according to
+    the * operator prefixing a
+    variable to grab all the excess.
+    The context used here is parallel
+    assignment 
+    '''
+    a, b, c, *group, d = range(8)
+    print('Position 4:')
+    print(f'a: {a}, b: {b}, c: {c}, group: {group}, d: {d}')
+    *group, a, b, c, d = range(8)
+    print('Position 1:')
+    print(f'group: {group}, a: {a}, b: {b}, c: {c}, d: {d}')
