@@ -1,0 +1,4 @@
+Mutables vs immutables
+container vs flat
+
+The most representative sequence: List (mutable container)
