@@ -73,3 +73,16 @@ def parallel_assignment_and_grab_excess():
     *group, a, b, c, d = range(8)
     print('Position 1:')
     print(f'group: {group}, a: {a}, b: {b}, c: {c}, d: {d}')
+    
+    
+# Using * to yield single values
+def operator_asterisk_over_iterables():
+    '''
+    This method lets us to build an
+    iterable with another iterable
+    and getting each value by it's
+    own
+    '''
+    print(f'{*range(5), 3}')
+    print(f'{(*range(10), 3)}')
+    print(f'{set((*range(0,-20,-2), 3, *range(3,13,2)))}')
