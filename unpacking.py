@@ -135,3 +135,14 @@ def unpacking_nested_handle_match():
             case [name, _, _, (lat, lon)] if lon <= 0:
                 print(f'{name:15} | {lat:9.4f}  | {lon:9.4f}')
     
+    
+def alternative_patterns_lambda(parameters):
+    match parameters:
+        # case ['lambda', parms, *body] if body:
+        #     print(f'Case accepted\n parms: {parms}\n body: {body}')
+            
+        case ['lambda', [*parms], *body] if body:
+            print(f'Rare case: {body}')
+        
+        case [*execess]:
+            print(f'{execess}')
