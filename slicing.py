@@ -56,3 +56,20 @@ def building_list_of_lists():
     board_game[x][y] = 'X'
     print(board_game)
     
+    
+    
+# Creating list of lists but the reference is the same for the inner listskc
+def building_list_of_lists_weird():
+    '''
+    This method allows us to
+    create nested list, however
+    the inner list has the same
+    reference, so its changes
+    are going to be reflected
+    in all of them
+    '''
+    weird_board = [['_'] * 3] * 3 # The inner lists have the same reference
+    # The only change was the listcomp and the replication using * operator
+    print(weird_board)
+    weird_board[1][2] = 'O'
+    print(weird_board)
