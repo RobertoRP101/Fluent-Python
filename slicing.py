@@ -14,3 +14,22 @@ def getting_specific_element(l):
     print(f'Exclude the two first elements: {l[2:]}')
     print(f'Exclude the two last elements: {l[:-2]}')
     
+    
+# Edit (using slice) and delete information
+def edit_and_delete_information():
+    '''
+    This function let us
+    watch how editing and deleting a
+    sequence type
+    '''
+    l = list(range(0,100,10))
+    print(l)
+    
+    # Editing
+    l[0:10:2] = (range(1,6))
+    print(f'Elements edited: {l}')
+    
+    # Deleting the las element
+    del l[-1]
+    
+    print(f'Elememt deleted: {l}')
