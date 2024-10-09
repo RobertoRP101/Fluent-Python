@@ -1,1 +1,2 @@
 1.- Which command could I use to retrieve information from Python?
+2.- What is ellipsis notation?
