@@ -106,4 +106,17 @@ def unpacking_nested():
         if lon <= 0: 
             print(f'{name:15} | {lat:9.4f} | {lon:9.4f}')
             
+# Match case
+def handle_match(message):
+    match message: # Subject: Subject that Python will try to match
+        case ['Option 1', games, category]:
+            print(f'Option 1, games: {games}, category: {category}')
+        case ['Option 2', books]:
+            print(f'Option 2, books: {books}')
+        case ['Option 3', hours, exercises, fellas]:
+            print(f'Option 3, hours: {hours}, exercises: {exercises}, fellas: {fellas}')
+        case [*excess]:
+            print('Many variables were detected here')
+        case _:
+            raise 'Command not found'
     
