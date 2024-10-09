@@ -31,5 +31,11 @@ def edit_and_delete_information():
     
     # Deleting the las element
     del l[-1]
-    
     print(f'Elememt deleted: {l}')
+    
+
+# Duplicate the information from a list
+def using_asterisk_duplicate_information():
+    l = list(range(0,-20,-2))
+    print(f'Normal list: {l}')    
+    print(f'Extra list two times: {l*2}')
