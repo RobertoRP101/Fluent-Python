@@ -73,3 +73,14 @@ def building_list_of_lists_weird():
     print(weird_board)
     weird_board[1][2] = 'O'
     print(weird_board)
+    
+# Reminder to not include mutable objects inside immutable objects e.g lists into tuples 
+def mutable_objects_inside_immutable_objects():
+    '''
+    This exercise represents how an error could
+    raise if we use mutable objects inside an immutable
+    object
+    '''
+    t = (1,2,[4,5,6,7])
+    t[2] += [8,9]
+    print(t)
