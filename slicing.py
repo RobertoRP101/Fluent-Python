@@ -39,3 +39,20 @@ def using_asterisk_duplicate_information():
     l = list(range(0,-20,-2))
     print(f'Normal list: {l}')    
     print(f'Extra list two times: {l*2}')
+    
+    
+# Creating a list to with reference to other lists
+def building_list_of_lists():
+    '''
+    This method allows us to
+    create nested list
+    '''
+    board = [['_']*3 for x in range(3)]
+    print(board)
+    board_game = np.array(board).reshape((3,3))
+    print(board_game)
+    x = int(input('Register x value: '))
+    y = int(input('Register y value: '))
+    board_game[x][y] = 'X'
+    print(board_game)
+    
