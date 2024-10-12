@@ -1,5 +1,6 @@
 from array import array
 from random import random
+import numpy as np
 # list.sort: change a list in place
 
 # Creating a new list
@@ -68,4 +69,30 @@ def memory_distribution():
     m3[1,1] = 33
     print(octets)
   
+
+# -
+def basic_numpy():
+    '''
+    This function lets us see
+    the beahaviour of numpy
+    for basic operations
+    '''
+    a = np.arange(12)
+    print(a)
+    print(a.shape)
+    a.shape = (3,4)
+    print(a)
+    # Acess to one element
+    print(a[2,1])
+    # Getting a specific column with all its rows
+    print(a[:, 1])
+    # Transpose method
+    print(a.transpose())
+
+    
+       
+    
+    
+memory_distribution()
+basic_numpy()
     
