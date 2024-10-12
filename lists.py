@@ -39,5 +39,33 @@ def array_for_millions_of_numbers():
     print(f'Second variable: {floats2[-1]}')
     print(f'Are the same the two variables above? {floats == floats2}')
 
+# --------------------------------
+# Array section
+from array import array
 
+
+
+# Memory view
+def memory_distribution():
+    '''
+    This function lets us to interact
+    with an array with three
+    reference. Each reference has a
+    different distribution, but
+    the content they point out is the
+    same. We constructed 3 different
+    memoryview variables
+    '''
+    
+    octets = array('B', range(6))
+    m1 = memoryview(octets)
+    print(m1.tolist())
+    m2 = m1.cast('B', [2,3])
+    print(m2.tolist())
+    m3 = m1.cast('B', [3,2])
+    print(m3.tolist())
+    m2[1,1] = 22
+    m3[1,1] = 33
+    print(octets)
+  
     
