@@ -1,6 +1,10 @@
 from collections import deque
 
 def deque_basic_behaviour():
+    """
+    This function prints a group of basic
+    operation over the deque
+    """
     dq = deque(range(10), maxlen=10)
     print(f'Printing the deque: {dq}')
     dq.rotate(3)
