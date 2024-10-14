@@ -96,8 +96,15 @@ def multidimensional_slicing():
     sub_array = arr[0, :, :2]
     print(sub_array)
     
-    
+# Selecting a group of values with ellipsis notation
 def ellipsis_notation_exercise():
+    """
+    This function lets us to
+    select a group of values,
+    in this case we discard
+    certain elements from
+    the original matrix
+    """
     print('\nFunction ellipsis')
     arr_4d = np.random.rand(2, 3, 4, 5)
     print(f'{arr_4d}')
