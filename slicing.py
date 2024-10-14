@@ -97,5 +97,16 @@ def multidimensional_slicing():
     print(sub_array)
     
     
+def ellipsis_notation_exercise():
+    print('\nFunction ellipsis')
+    arr_4d = np.random.rand(2, 3, 4, 5)
+    print(f'{arr_4d}')
+    sliced_arr_4d = arr_4d[..., 2]
+    print(f'The final result: \n{sliced_arr_4d}\n')
+    print(sliced_arr_4d.shape)
+    
+    
+    
 multidimensional_slicing()
+ellipsis_notation_exercise()
 # print(np.random.normal(0.1,1,5))
