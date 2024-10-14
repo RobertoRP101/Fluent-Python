@@ -84,3 +84,13 @@ def mutable_objects_inside_immutable_objects():
     t = (1,2,[4,5,6,7])
     t[2] += [8,9]
     print(t)
+
+# Use multidimensional slice
+def multimensional_slicing():
+    arr = np.array([[np.random.normal(0.1,1,3)]*2]*3)
+    print(arr)
+    sub_array = arr[0, :, :2]
+    
+    
+multimensional_slicing()
+print(np.random.normal(0.1,1,5))
