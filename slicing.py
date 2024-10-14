@@ -86,11 +86,16 @@ def mutable_objects_inside_immutable_objects():
     print(t)
 
 # Use multidimensional slice
-def multimensional_slicing():
+def multidimensional_slicing():
+    """
+    This function returns a sub list
+    defined with multidimensional slicing
+    """
     arr = np.array([[np.random.normal(0.1,1,3)]*2]*3)
     print(arr)
     sub_array = arr[0, :, :2]
+    print(sub_array)
     
     
-multimensional_slicing()
-print(np.random.normal(0.1,1,5))
+multidimensional_slicing()
+# print(np.random.normal(0.1,1,5))
