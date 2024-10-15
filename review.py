@@ -9,3 +9,7 @@ def swapping_values():
     numbers[0], numbers[-1] = numbers[-1], numbers[0]  # Swaps first and last items
     print("After swapping:", numbers)
 
+def prefixing_an_argument():
+    t = (20, 8)
+    result = divmod(*t)  # Unpacks the tuple into divmod
+    print("Quotient and Remainder:", result)
