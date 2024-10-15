@@ -35,3 +35,12 @@ def unpacking_nested():
     
     for name, _, _, (lat, lon) in metro_areas:
         print(f"City: {name}, Latitude: {lat}, Longitude: {lon}")
+
+def handle_match(message):
+    match message:
+        case ['Option 1', games, category]:
+            print(f"Option 1 with games: {games}, category: {category}")
+        case ['Option 2', books]:
+            print(f"Option 2 with books: {books}")
+        case [*others]:
+            print("Other options detected")
