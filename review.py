@@ -25,3 +25,13 @@ def parallel_assignment_and_grab_excess():
 def operator_asterisk_over_iterables():
     result = {*range(5), 3}  # Set with unpacked range and an additional value
     print("Set with unpacked range:", result)
+
+def unpacking_nested():
+    metro_areas = [
+        ('Tokyo', 'JP', 36.933, (35.689722, 139.691667)), 
+        ('Delhi NCR', 'IN', 21.935, (28.613889, 77.208889)),
+        ('Mexico City', 'MX', 20.142, (19.433333, -99.133333)),
+    ]
+    
+    for name, _, _, (lat, lon) in metro_areas:
+        print(f"City: {name}, Latitude: {lat}, Longitude: {lon}")
