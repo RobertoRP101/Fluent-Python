@@ -13,3 +13,7 @@ def prefixing_an_argument():
     t = (20, 8)
     result = divmod(*t)  # Unpacks the tuple into divmod
     print("Quotient and Remainder:", result)
+    
+def grab_excess_items():
+    a, b, *excess = range(10)  # First two items to a and b, the rest to excess
+    print(f"a: {a}, b: {b}, excess: {excess}")
