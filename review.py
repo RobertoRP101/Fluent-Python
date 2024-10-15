@@ -17,3 +17,7 @@ def prefixing_an_argument():
 def grab_excess_items():
     a, b, *excess = range(10)  # First two items to a and b, the rest to excess
     print(f"a: {a}, b: {b}, excess: {excess}")
+
+def parallel_assignment_and_grab_excess():
+    a, b, *middle, d = range(8)  # First, last, and middle items separated
+    print(f"a: {a}, b: {b}, middle: {middle}, d: {d}")
