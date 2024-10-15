@@ -21,3 +21,7 @@ def grab_excess_items():
 def parallel_assignment_and_grab_excess():
     a, b, *middle, d = range(8)  # First, last, and middle items separated
     print(f"a: {a}, b: {b}, middle: {middle}, d: {d}")
+
+def operator_asterisk_over_iterables():
+    result = {*range(5), 3}  # Set with unpacked range and an additional value
+    print("Set with unpacked range:", result)
