@@ -1,6 +1,11 @@
 
 def dict_comprehensions():
-    dial_codes = [ 7
+    """
+    This method lets us to build a dictionary
+    using the concept of 'list comprenhension'
+    """
+    
+    dial_codes = [
     (880, 'Bangladesh'),
     (55, 'Brazil'),
     (86, 'China'),
