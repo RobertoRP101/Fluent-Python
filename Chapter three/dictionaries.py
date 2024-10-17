@@ -30,4 +30,11 @@ def dump(**kwargs):
 
 print(dump(**{'x': 1}, y = 2, **{'z':3}))
 
+def merge_mapp():
+    d1 = {'a':1, 'b':3}
+    d2 = {'a':2, 'b':4, 'c':6}
+    d3 = d1 | d2
+    return (d3)
+
+print(merge_mapp)
     
