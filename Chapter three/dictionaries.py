@@ -36,5 +36,12 @@ def merge_mapp():
     d3 = d1 | d2
     return (d3)
 
-print(merge_mapp)
+def merge_mapp_update():
+    d1 = {'a':1, 'b':3}
+    d2 = {'a':2, 'b':4, 'c':6}
+    d1 |= d2
+    return (d1)
+
+print(merge_mapp())
+print(merge_mapp_update())
     
