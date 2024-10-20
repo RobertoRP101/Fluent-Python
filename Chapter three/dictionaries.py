@@ -1,3 +1,5 @@
+import abc
+
 
 def dict_comprehensions():
     """
@@ -63,3 +65,9 @@ def food():
     match food:
         case {'category': 'ice cream', **details}:
             print(f'Ice cream details: {details}')
+
+def abc_mapping_check():
+    my_dict = {}
+    print(isinstance(my_dict, abc.mapping))
+    print(isinstance(my_dict, abc.MutableMapping))
+    
