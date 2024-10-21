@@ -1,5 +1,5 @@
 import abc
-
+from unicodedata import name 
 
 def dict_comprehensions():
     """
@@ -77,4 +77,22 @@ def remove_duplicates_ordered():
     dict.fromkeys(l).keys()
     print(list(dict.fromkeys(l).keys()))
     
-remove_duplicates_ordered()
+# remove_duplicates_ordered()
+
+def set_comprehension():
+    x = {chr(i) for i in range(32, 256) if 'SIGN' in name(chr(i),'')}
+    print(x)
+    
+set_comprehension()
+
+def set_operations():
+    set1 = {x for x in range(0,10,1)}
+    set2 = {x for x in range(10,20,1)}
+    set3 = {x for x in range(5,11,1)}
+    print(set1)
+    print(set2)
+    print(f'Making some operations:')
+    print(f'Is disjoint: set1 and set2: {set1.isdisjoint(set2)}')
+
+
+set_operations()
