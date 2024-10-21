@@ -30,7 +30,7 @@ def dict_comprehensions():
 def dump(**kwargs):
     return kwargs
 
-print(dump(**{'x': 1}, y = 2, **{'z':3}))
+# print(dump(**{'x': 1}, y = 2, **{'z':3}))
 
 def merge_mapp():
     d1 = {'a':1, 'b':3}
@@ -44,8 +44,8 @@ def merge_mapp_update():
     d1 |= d2
     return (d1)
 
-print(merge_mapp())
-print(merge_mapp_update())
+# print(merge_mapp())
+# print(merge_mapp_update())
     
 def get_creators(record: dict) -> list:
  match record:
@@ -71,3 +71,10 @@ def abc_mapping_check():
     print(isinstance(my_dict, abc.mapping))
     print(isinstance(my_dict, abc.MutableMapping))
     
+def remove_duplicates_ordered():
+    dict = {}
+    l = ['spam', 'spam', 'eggs', 'spam', 'bacon', 'eggs']
+    dict.fromkeys(l).keys()
+    print(list(dict.fromkeys(l).keys()))
+    
+remove_duplicates_ordered()
