@@ -93,6 +93,8 @@ def set_operations():
     print(set2)
     print(f'Making some operations:')
     print(f'Is disjoint: set1 and set2: {set1.isdisjoint(set2)}')
-
+    print(f'Is element 6 in the set3? {set3.__contains__(6)}')
+    print(f'Is element 2 in the set3? {set3.__contains__(2)}')
+    
 
 set_operations()
