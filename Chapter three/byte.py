@@ -1,3 +1,5 @@
+import array
+
 def byte_and_arraybyte():
     cafe = bytes('café', encoding='utf_8') 
     print(f'Cafe: {cafe}')
@@ -8,4 +10,22 @@ def byte_and_arraybyte():
     print(f'cafe_arr[-1:]: {cafe_arr[-1:]}')
     
 
-byte_and_arraybyte()
+def creating_array_numbers():
+    numbers = array.array('h', [-2, -1, 0, 1, 2]) 
+    octets = bytes(numbers) 
+    octets
+
+
+def encode_by_codecs():
+    city = 'São Paulo'
+    print(city.encode('utf_8') )
+    print(city.encode('utf_16'))
+    print(city.encode('iso8859_1') )
+    print(f'This line of code will give an error. city.encode("cp437") ')
+    print(city.encode('cp437', errors='ignore') )
+    print(city.encode('cp437', errors='replace') )
+    print(city.encode('cp437', errors='xmlcharrefreplace') )
+
+
+# byte_and_arraybyte()
+encode_by_codecs()
