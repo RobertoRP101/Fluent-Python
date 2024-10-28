@@ -41,4 +41,28 @@ def error_decode_encode():
     
 error_decode_encode()
 
+def another_error_decode_encode():
+    octets = b'El Ni\xc3\xb1o'  # Byte string representing 'El Niño' in UTF-8
+    print("Original byte string:", octets)
+    
+    # Correct decoding with UTF-8
+    print("Decoded with UTF-8:", octets.decode('utf-8'))
+    
+    # Incorrect decoding with Latin-1
+    print("Decoded with Latin-1:", octets.decode('latin1'))
+    
+    # Incorrect decoding with CP1252
+    print("Decoded with CP1252:", octets.decode('cp1252'))
+    
+    # Attempt to decode with ASCII (will raise an error)
+    try:
+        print("Decoded with ASCII:", octets.decode('ascii'))
+    except UnicodeDecodeError as e:
+        print("Error decoding with ASCII:", e)
+    
+    # Decoding with ASCII using error handling
+    print("Decoded with ASCII (ignore errors):", octets.decode('ascii', errors='ignore'))
+    print("Decoded with ASCII (replace errors):", octets.decode('ascii', errors='replace'))
+
+
     
