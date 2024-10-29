@@ -98,3 +98,39 @@ def set_operations():
     
 
 set_operations()
+
+
+def more_set_operations():
+    # Creating new sets with overlapping and non-overlapping elements
+    setA = {x for x in range(1, 11)}
+    setB = {x for x in range(5, 15)}
+    setC = {x for x in range(10, 20)}
+
+    # Displaying sets
+    print("Set A:", setA)
+    print("Set B:", setB)
+    print("Set C:", setC)
+    print("\nPerforming additional operations:")
+
+    # Union of sets
+    print(f"Union of setA and setB: {setA.union(setB)}")
+
+    # Intersection of sets
+    print(f"Intersection of setA and setB: {setA.intersection(setB)}")
+
+    # Difference of sets
+    print(f"Difference of setA - setB: {setA.difference(setB)}")
+    print(f"Difference of setB - setA: {setB.difference(setA)}")
+
+    # Symmetric difference (elements in either setA or setB but not both)
+    print(f"Symmetric difference of setA and setB: {setA.symmetric_difference(setB)}")
+
+    # Checking if a set is a subset or superset of another
+    print(f"Is setA a subset of setB? {setA.issubset(setB)}")
+    print(f"Is setA a superset of setB? {setA.issuperset(setB)}")
+
+    # Checking if sets are disjoint
+    print(f"Is setA disjoint with setC? {setA.isdisjoint(setC)}")
+
+# Call the function to see the output
+more_set_operations()
